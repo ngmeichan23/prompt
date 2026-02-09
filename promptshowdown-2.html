@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1,width=device-width">
+  <title>Prompt Showdown</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:
+        linear-gradient(120deg, rgba(255,60,60,0.12), transparent 40%),
+        linear-gradient(300deg, rgba(255,140,0,0.10), transparent 45%),
+        radial-gradient(circle at top, #2b0000, #0b0000 75%);
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.6rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto 25px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .register-link {
+      display: inline-block;
+      padding: 14px 30px;
+      border: 2px solid #ff3c3c;
+      border-radius: 30px;
+      color: #ff3c3c;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+    }
+
+    .register-link:hover {
+      background: #ff3c3c;
+      color: #000;
+    }
+
+    .countdown {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+      max-width: 820px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+    }
+
+    .menu button {
+      background: rgba(255, 0, 0, 0.12);
+      border: 2px solid rgba(255, 80, 80, 0.6);
+      border-radius: 18px;
+      padding: 38px 20px;
+      font-size: 1.1rem;
+      color: #ffffff;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: all 0.25s ease;
+    }
+
+    .menu button:hover {
+      background: rgba(255, 80, 80, 0.85);
+      color: #000;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(255, 60, 60, 0.4);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 90px;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 25px;
+      border-left: 6px solid #ff3c3c;
+      padding-left: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 28px 30px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+      line-height: 1.6;
+    }
+
+    ul li {
+      margin: 14px 0;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 60px 20px;
+    }
+
+    .footer-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .footer-title {
+      opacity: 0.85;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .sponsor {
+      color: #ff3c3c;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+    }
+
+    .school-badge {
+      margin-top: 12px;
+    }
+
+    .school-badge img {
+      max-width: 110px;
+      opacity: 0.95;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Prompt Showdown</h1>
+  <p>
+    Enter the arena. Out-think, out-prompt and out-create your opponents
+    in a high-stakes AI competition.
+  </p>
+
+  <a class="register-link" href="https://go.gov.sg/prompt2026" target="_blank">
+    Register Now
+  </a>
+
+  <div class="countdown" id="countdown"></div>
+</header>
+
+<div class="menu">
+  <button onclick="location.href='#intro'">Introduction</button>
+  <button onclick="location.href='#why'">Why Join</button>
+  <button onclick="location.href='#rounds'">The Rounds</button>
+  <button onclick="location.href='#prizes'">Prizes & Awards</button>
+</div>
+
+<section id="intro">
+  <h2>Introduction</h2>
+  <div class="card">
+    Prompt Showdown is a competitive AI arena where participants battle
+    through prompt-engineering challenges that test precision, creativity
+    and strategic thinking. Only the sharpest minds rise.
+  </div>
+</section>
+
+<section id="why">
+  <h2>Why Join</h2>
+  <div class="card">
+    Through this competion, participants will be able to understand how GenAI systems respond
+    to different prompt structures and contraints. Your skills will be tested and through that,
+    your refinement of prompts systematically will improve drastically, allowing output quality
+    to improve. You will also learn how to collaborate efficiently and effectively in problem
+    solving tasks and demonstrate ethical decision making when making AI tools.
+  </div>
+</section>
+
+<section id="rounds">
+  <h2>The Rounds</h2>
+  <div class="card">
+    <strong>Workshop – Face to Face (25 March, 2-5pm, VJC)</strong><br />
+    Conducted by HTX experts on prompt engineering techniques and effective 
+    prompt design strategies.<br /><br />
+
+    <strong>Prelimanary Round – Online (8 May, 3-5pm)</strong><br />
+    Participants will attempt a series of prompt-based challenges within a fixed
+    time window.
+    Top 3 teams will advance to the finals.
+    Top individual is chosen from the best individual performance.<br /><br />
+
+    <strong>Final Showdown - Face to Face (22nd May, 2.30-5.30pm, VJC)</strong><br />
+    Teams attempt a series of prompt-based challenges within a fixed time window.
+    Prize Presentation and Closing Ceremony
+  </div>
+</section>
+
+<section id="prizes">
+  <h2>Prizes & Awards</h2>
+  <div class="card">
+    <ul>
+      <li>🥇 Champion — $500 Vouchers + Plaque</li>
+      <li>🥈 1st Runner-Up — $300 Vouchers + Plaque</li>
+      <li>🥉 2nd Runner-Up — $200 Vouchers + Plaque</li>
+      <li>🏅 Best Individual - $100 Vouchers + Plaque</li>
+      <li>📜 All Participants - Digital Certificate of Participation</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-title">Sponsored by</div>
+      <img src="htx-logo.png" alt="HTX Logo" class="logo">
+    </div>
+
+    <div>
+      <div class="footer-title">Ran by</div>
+      <div class="school-badge">
+        <img src="vjc-badge.png" alt="Victoria Junior College School Badge">
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+
+<script>
+  const eventDate = new Date("2026-01-01T00:00:00").getTime();
+  const countdownEl = document.getElementById("countdown");
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+
+    if (diff <= 0) {
+      countdownEl.innerHTML = "The Showdown Has Begun.";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    countdownEl.innerHTML = days + " days until the Showdown begins";
+  }, 1000);
+</script>
+
+</body>
+</html>
