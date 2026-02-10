@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="initial-scale=1,width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prompt Showdown</title>
 
   <style>
+    /* Prevent overflow issues */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,28 +20,34 @@
         radial-gradient(circle at top, #2b0000, #0b0000 75%);
       color: #ffffff;
       scroll-behavior: smooth;
+      overflow-x: hidden;
+      word-wrap: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
     header {
       width: 100%;
-      padding: 90px 20px 70px;
+      padding: 80px 20px 60px;
       text-align: center;
     }
 
     header h1 {
-      width: 100%;
-      font-size: clamp(2rem, 6vw, 3.6rem);
+      font-size: clamp(2rem, 7vw, 3.6rem);
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
 
     header p {
-      width: 100%;
       max-width: 760px;
       margin: 0 auto 25px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       opacity: 0.9;
+      padding: 0 10px;
     }
 
     .register-link {
@@ -58,28 +69,27 @@
 
     .countdown {
       margin-top: 20px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       letter-spacing: 1px;
       opacity: 0.9;
     }
 
-    @media (max-width: 600px) {
     .menu {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 35px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
       width: 100%;
-      margin: 0 auto 100px;
+      margin: 0 auto 80px;
       padding: 0 20px;
-    }
+      max-width: 900px;
     }
 
     .menu button {
       background: rgba(255, 0, 0, 0.12);
       border: 2px solid rgba(255, 80, 80, 0.6);
       border-radius: 18px;
-      padding: 38px 20px;
-      font-size: 1.1rem;
+      padding: 32px 20px;
+      font-size: 1rem;
       color: #ffffff;
       cursor: pointer;
       text-transform: uppercase;
@@ -97,13 +107,13 @@
     section {
       width: 100%;
       max-width: 900px;
-      margin: 0 auto 90px;
+      margin: 0 auto 80px;
       padding: 0 20px;
     }
 
     section h2 {
-      font-size: 2.3rem;
-      margin-bottom: 25px;
+      font-size: clamp(1.6rem, 5vw, 2.3rem);
+      margin-bottom: 20px;
       border-left: 6px solid #ff3c3c;
       padding-left: 15px;
       text-transform: uppercase;
@@ -113,19 +123,20 @@
     .card {
       background: rgba(255, 255, 255, 0.08);
       border-radius: 16px;
-      padding: 28px 30px;
+      padding: 24px 26px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
       line-height: 1.6;
+      font-size: 1rem;
     }
 
     ul li {
-      margin: 14px 0;
-      font-size: 1.1rem;
+      margin: 12px 0;
+      font-size: 1rem;
     }
 
     footer {
       background: rgba(0, 0, 0, 0.55);
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     .footer-grid {
@@ -134,7 +145,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 30px;
       text-align: center;
     }
 
@@ -144,17 +155,6 @@
       letter-spacing: 1px;
     }
 
-    .sponsor {
-      color: #ff3c3c;
-      font-weight: bold;
-      letter-spacing: 2px;
-      font-size: 1.1rem;
-    }
-
-    .school-badge {
-      margin-top: 12px;
-    }
-
     .school-badge img {
       max-width: 110px;
       opacity: 0.95;
@@ -162,10 +162,35 @@
 
     .copyright {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
       opacity: 0.7;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
+
+    /* Mobile optimization */
+    @media (max-width: 600px) {
+      .menu {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      header {
+        padding: 60px 15px 40px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      section {
+        padding: 0 15px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -204,30 +229,24 @@
 <section id="why">
   <h2>Why Join</h2>
   <div class="card">
-    Through this competion, participants will be able to understand how GenAI systems respond
-    to different prompt structures and contraints. Your skills will be tested and through that,
-    your refinement of prompts systematically will improve drastically, allowing output quality
-    to improve. You will also learn how to collaborate efficiently and effectively in problem
-    solving tasks and demonstrate ethical decision making when making AI tools.
+    Through this competition, participants will understand how GenAI systems respond
+    to different prompt structures and constraints. Your skills will be tested and refined,
+    allowing output quality to improve. You will also learn how to collaborate effectively
+    in problem-solving tasks and demonstrate ethical decision making when using AI tools.
   </div>
 </section>
 
 <section id="rounds">
   <h2>The Rounds</h2>
   <div class="card">
-    <strong>Workshop – Face to Face (25 March, 2-5pm, VJC)</strong><br />
-    Conducted by HTX experts on prompt engineering techniques and effective 
-    prompt design strategies.<br /><br />
+    <strong>Workshop – Face to Face (25 March, 2-5pm, VJC)</strong><br /><br />
 
-    <strong>Prelimanary Round – Online (8 May, 3-5pm)</strong><br />
-    Participants will attempt a series of prompt-based challenges within a fixed
-    time window.
-    Top 3 teams will advance to the finals.
-    Top individual is chosen from the best individual performance.<br /><br />
+    <strong>Preliminary Round – Online (8 May, 3-5pm)</strong><br />
+    Participants will attempt prompt-based challenges within a fixed time window.
+    Top 3 teams advance to the finals. Top individual is selected from the best performance.<br /><br />
 
-    <strong>Final Showdown - Face to Face (22nd May, 2.30-5.30pm, VJC)</strong><br />
-    Teams attempt a series of prompt-based challenges within a fixed time window.
-    Prize Presentation and Closing Ceremony
+    <strong>Final Showdown – Face to Face (22 May, 2.30-5.30pm, VJC)</strong><br />
+    Teams compete in final challenges followed by prize presentation.
   </div>
 </section>
 
@@ -238,8 +257,8 @@
       <li>🥇 Champion — $500 Vouchers + Plaque</li>
       <li>🥈 1st Runner-Up — $300 Vouchers + Plaque</li>
       <li>🥉 2nd Runner-Up — $200 Vouchers + Plaque</li>
-      <li>🏅 Best Individual - $100 Vouchers + Plaque</li>
-      <li>📜 All Participants - Digital Certificate of Participation</li>
+      <li>🏅 Best Individual — $100 Vouchers + Plaque</li>
+      <li>📜 All Participants — Digital Certificate of Participation</li>
     </ul>
   </div>
 </section>
@@ -248,7 +267,7 @@
   <div class="footer-grid">
     <div>
       <div class="footer-title">Sponsored by</div>
-      <img src="htx-logo.png" alt="HTX Logo" class="logo">
+      <img src="htx-logo.png" alt="HTX Logo">
     </div>
 
     <div>
@@ -258,12 +277,10 @@
       </div>
     </div>
   </div>
-
-
 </footer>
 
 <script>
-  const eventDate = new Date("2026-01-01T00:00:00").getTime();
+  const eventDate = new Date("2026-03-25T14:00:00").getTime();
   const countdownEl = document.getElementById("countdown");
 
   setInterval(() => {
@@ -281,12 +298,4 @@
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
