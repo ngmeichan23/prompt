@@ -76,8 +76,8 @@
 
     .menu {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
       width: 100%;
       margin: 0 auto 80px;
       padding: 0 20px;
@@ -88,8 +88,8 @@
       background: rgba(255, 0, 0, 0.12);
       border: 2px solid rgba(255, 80, 80, 0.6);
       border-radius: 18px;
-      padding: 32px 20px;
-      font-size: 1rem;
+      padding: 22px 12px;
+      font-size: 0.95rem;
       color: #ffffff;
       cursor: pointer;
       text-transform: uppercase;
@@ -170,7 +170,6 @@
     /* Mobile optimization */
     @media (max-width: 600px) {
       .menu {
-        grid-template-columns: 1fr;
         gap: 18px;
       }
 
@@ -218,7 +217,7 @@
 </div>
 
 <section id="intro">
-  <h2>Introduction</h2>
+  <h2>About</h2>
   <div class="card">
     Prompt Showdown is a competitive AI arena where participants battle
     through prompt-engineering challenges that test precision, creativity
@@ -299,3 +298,4 @@
 
 </body>
 </html>
+
