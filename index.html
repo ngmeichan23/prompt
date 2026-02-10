@@ -168,55 +168,7 @@
       font-size: 0.85rem;
     }
 
-    .prizes-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.prize-category h3 {
-  margin-bottom: 15px;
-  letter-spacing: 1px;
-}
-
-.prize-card {
-  background: rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 18px;
-  margin-bottom: 15px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
-
-.rank {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 6px;
-}
-
-.reward {
-  font-size: 1.05rem;
-  margin-bottom: 4px;
-}
-
-.extra {
-  opacity: 0.85;
-  font-size: 0.95rem;
-}
-
-.participation-reward {
-  margin-top: 20px;
-  text-align: center;
-  opacity: 0.9;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .prizes-grid {
-    grid-template-columns: 1fr;
-  }
-}
+    
 
     /* Mobile optimization */
     @media (max-width: 600px) {
@@ -300,45 +252,14 @@
 
 <section id="prizes">
   <h2>Prizes & Awards</h2>
-
-  <div class="prizes-grid">
-
-    <div class="prize-category">
-      <h3>Team Category</h3>
-
-      <div class="prize-card gold">
-        <div class="rank">1st</div>
-        <div class="reward">$500 Vouchers</div>
-        <div class="extra">+ Plaque</div>
-      </div>
-
-      <div class="prize-card silver">
-        <div class="rank">2nd</div>
-        <div class="reward">$300 Vouchers</div>
-        <div class="extra">+ Plaque</div>
-      </div>
-
-      <div class="prize-card bronze">
-        <div class="rank">3rd</div>
-        <div class="reward">$200 Vouchers</div>
-        <div class="extra">+ Plaque</div>
-      </div>
-    </div>
-
-    <div class="prize-category">
-      <h3>Individual Category</h3>
-
-      <div class="prize-card individual">
-        <div class="rank">Top Individual</div>
-        <div class="reward">$100 Vouchers</div>
-        <div class="extra">+ Plaque</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="participation-reward">
-    All participants will receive an <strong>E-certificate</strong> of participation.
+  <div class="card">
+    <ul>
+      <li>🥇 Champion — $500 Vouchers + Plaque</li>
+      <li>🥈 1st Runner-Up — $300 Vouchers + Plaque</li>
+      <li>🥉 2nd Runner-Up — $200 Vouchers + Plaque</li>
+      <li>🏅 Best Individual — $100 Vouchers + Plaque</li>
+      <li>📜 All Participants — Digital Certificate of Participation</li>
+    </ul>
   </div>
 </section>
 
@@ -379,6 +300,7 @@
 
 </body>
 </html>
+
 
 
 
