@@ -25,7 +25,7 @@
 
     header h1 {
       width: 100%;
-      font-size: 3.6rem;
+      font-size: clamp(2rem, 6vw, 3.6rem);
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: 10px;
@@ -63,13 +63,15 @@
       opacity: 0.9;
     }
 
+    @media (max-width: 600px) {
     .menu {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 35px;
       width: 100%;
       margin: 0 auto 100px;
       padding: 0 20px;
+    }
     }
 
     .menu button {
@@ -127,7 +129,7 @@
     }
 
     .footer-grid {
-      width: 100%
+      width: 100%;
       max-width: 900px;
       margin: 0 auto;
       display: grid;
@@ -281,6 +283,7 @@
 </body>
 
 </html>
+
 
 
 
